@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import MessageDashboard from './components/MessageDashboard';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <MessageDashboard messages = {messages} />  
   );
 }
+
+const messages = [
+  {id: 1, sender: 'Denys', text: 'Hello!'},
+  {id: 2, sender: 'Oksans', text: 'Bye!'},
+  {id: 3, sender: 'Nika', text: 'Hi, how are you?'},
+  {id: 4, sender: 'Dmytro', text: 'Happy birthday!'},
+  {id: 5, sender: 'Max', text: 'Congrags!'},
+];
 
 export default App;
