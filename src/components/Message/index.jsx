@@ -3,8 +3,17 @@ import React from "react";
 class Message extends React.Component {
     
     render () {
-        const { id, sender, text, isRead, onClick} = this.props;
         //debugger;
+        const { 
+            message : {
+                id = 'no id', 
+                sender = 'no name', 
+                text = 'no text', 
+                isRead = false
+            },
+            onClick = () => {}
+        } = this.props;
+         
         return (
             <>
                 <div>Message from : {sender}</div>

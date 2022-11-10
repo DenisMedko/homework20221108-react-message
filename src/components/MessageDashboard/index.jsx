@@ -17,13 +17,14 @@ class MessageDashboard extends React.Component {
     render () {
         //debugger;
         const {messages} = this.state;
-        const messagesList = messages.map(message => <Message 
-            id = {message.id}
+        const messagesList = messages.map(message => <Message
             key = {message.id}
-            sender = {message.sender}
-            text = {message.text}
             onClick = {this.changeStatus}
-            isRead = {message.isRead}
+            message = {message}
+            // id = {message.id}
+            // sender = {message.sender}
+            // text = {message.text}
+            // isRead = {message.isRead}
             />);
         return (
             <>
