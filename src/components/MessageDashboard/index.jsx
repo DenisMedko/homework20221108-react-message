@@ -9,7 +9,7 @@ class MessageDashboard extends React.Component {
     changeStatus = (e) => {
         const {messages : oldStateMessages} = this.state;
         const newStateMessages = oldStateMessages.map(message => {
-            const isRead = message.id === +e.target.id ? !message.isRead : message.isRead;
+            const isRead = 'btn'+message.id === e.target.id ? !message.isRead : message.isRead;
             return {...message, isRead: isRead}
         });
         this.setState({messages: newStateMessages});    
@@ -21,10 +21,6 @@ class MessageDashboard extends React.Component {
             key = {message.id}
             onClick = {this.changeStatus}
             message = {message}
-            // id = {message.id}
-            // sender = {message.sender}
-            // text = {message.text}
-            // isRead = {message.isRead}
             />);
         return (
             <>
@@ -35,3 +31,8 @@ class MessageDashboard extends React.Component {
 }
 
 export default MessageDashboard;
+// id = {message.id}
+// sender = {message.sender}
+// text = {message.text}
+// isRead = {message.isRead}
+            

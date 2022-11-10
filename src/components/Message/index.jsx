@@ -18,7 +18,7 @@ class Message extends React.Component {
             <>
                 <div>Message from : {sender}</div>
                 <div>Text : {text}</div>
-                <button id={id} onClick={onClick} disabled={isRead}>OK</button>
+                <button id={'btn'+id} onClick={onClick} disabled={isRead}>OK</button>
             </>
         );
     }
